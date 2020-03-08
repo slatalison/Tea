@@ -19,3 +19,17 @@ body {
   .drink_tea{
     display:none;
   }
+
+  .nextButton23{
+    display: none;
+  }
+
+  .restart{
+    display: none;
+  }
+
+  .ingredient{
+    width:800px;
+    height:800px;
+    
+  }
