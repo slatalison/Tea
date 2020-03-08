@@ -1,0 +1,21 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+  }
+  
+  h1 {
+    font-style: italic;
+    color: #373fff;
+  }
+  
+  .animation_page{
+    
+  }
+  
+  .make_tea{
+    display:none;
+  }
+  
+  .drink_tea{
+    display:none;
+  }
