@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Teeeeea</title>
+  <title>TEEEEA!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,51 +10,43 @@
 <body>
   <section class="animation_page">
     <p>Page 1: some animation </p>
-    <input type="text" id="playerName" name="playerName" value="May I have your name please ^ ^">
+    <input type="text" id="playerName" name="playerName" value="My name is">
+    <button class="nextButton12" type="button">Start</button>
   </section>
 
   <section class="make_tea">
-    <p>
-      Page 2: making bubble tea
-    </p>
-    <div class = "ingredient ig_container1">
-      <img src="visual/blacktea-1.png">
-      <img src="visual/blacktea-2.png">
-      <img src="visual/blacktea.png">
-      <img src="visual/greentea-1.png">
-      <img src="visual/greentea-2.png">
-      <img src="visual/greentea-3.png">
-      <img src="visual//greentea-4.png">
-      <button class="ingrent ig_switch_next" type="button">Next</button>
-    </div>
-    <div class = "ingredient ig_container2">
-      <img src="visual/blacktea-1.png">
-      <img src="visual/blacktea-2.png">
-      <img src="visual/blacktea.png">
-      <img src="visual/greentea-1.png">
-      <img src="visual/greentea-2.png">
-      <img src="visual/greentea-3.png">
-      <img src="visual//greentea-4.png">
-      <button class="ingrent ig_switch_next" type="button">Next</button>
-    </div>
+    <div class="bigger_container">
+      <div class="ingredient" id="ig_container1">
+        <div class = "row" id = "row1"></div>
+        <div class = "row" id = "row2"></div>
+        <div class = "row" id = "row3"></div>
+      </div>
 
+      <div class="ingredient" id="ig_container2">
+        <div class = "row" id = "row4"></div>
+        <div class = "row_alter" id = "row56"></div>
+      </div>
+
+      <button class="ig_switch_next" type="button" onclick="return showHide();">→</button>
+
+    </div>
+    <button class="nextButton23" type="button">Done</button>
   </section>
 
   <section class="drink_tea">
     <p>
       Page 3: drinking bubble tea
     </p>
+    <button class="restart" type="button">Restart</button>
   </section>
 
-  <button class="nextButton12" type="button">Done</button>
 
-  <button class="nextButton23" type="button">Next</button>
 
-  <button class="restart" type="button">Restart</button>
 
 
   <script src="Scripts/jquery-3.4.1.min.js"></script>
   <script src="Scripts/script_main.js"></script>
+
 </body>
 
 </html>
