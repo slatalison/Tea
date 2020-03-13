@@ -64,20 +64,17 @@ function showHide() {
   if (ig_container1.style.display !== "none") {
     ig_container1.style.display = "none";
     ig_container2.style.display = "block";
-    console.log("Page 1 here");
   } else {
     ig_container1.style.display = "block";
     ig_container2.style.display = "none";
-    console.log("Page 2 here");
   }
 };
 
 //make tea页批量创建div以及load image
-const ingredient_images = [
+const all_ingredient_images = [
   "blacktea-1.png",
   "blacktea-2.png",
   "blacktea.png",
-  "bubble cup.png",
   "cane sugar.png",
   "cheese.png",
   "chilli powder.png",
@@ -95,7 +92,11 @@ const ingredient_images = [
   "whole milk-1.png",
   "whole milk-2.png",
   "whole milk-3.png",
-  "whole milk.png"
+  "whole milk.png",
+  "001-orange.png",
+  "002-apple.png",
+  "003-persimmon.png",
+  "004-ginger.png"
 ];
 
 let imgSwitch = 0;
@@ -112,30 +113,46 @@ loadImages1 = () => {
     let newImg = document.createElement('img');
     newImg.className = "ingredient_images";
     newImg.id = "ingredientNo" + i;
-    newImg.src = "visual/" + ingredient_images[i];
+    newImg.src = "visual/" + all_ingredient_images[i];
     row1.appendChild(newImg);
   };
-  for (let i = 6; i < 10 ; i++) {
+  for (let i = 6; i < 10; i++) {
     let newImg = document.createElement('img');
     newImg.className = "ingredient_images";
     newImg.id = "ingredientNo" + i;
-    newImg.src = "visual/" + ingredient_images[i];
+    newImg.src = "visual/" + all_ingredient_images[i];
     row2.appendChild(newImg);
   };
-  for (let i = 10; i < 14 ; i++) {
+  for (let i = 10; i < 14; i++) {
     let newImg = document.createElement('img');
     newImg.className = "ingredient_images";
     newImg.id = "ingredientNo" + i;
-    newImg.src = "visual/" + ingredient_images[i];
+    newImg.src = "visual/" + all_ingredient_images[i];
     row3.appendChild(newImg);
   };
-  for (let i = 14; i < 19 ; i++) {
+  for (let i = 14; i < 19; i++) {
     let newImg = document.createElement('img');
     newImg.className = "ingredient_images";
     newImg.id = "ingredientNo" + i;
-    newImg.src = "visual/" + ingredient_images[i];
+    newImg.src = "visual/" + all_ingredient_images[i];
     row4.appendChild(newImg);
   };
-
 };
+
+//点击一种ingredient 报出id，并将结果传入下一页
+
+let myTea = [];
+
+$(document).ready(function () {
+  $('.ingredient_images').click(function () {
+    myTea.push(this.id);
+    let newImg = document.createElement('img');
+    newImg.src = this.src;
+    newImg.className = "movingIg";
+    $(".cup_container").append(newImg);
+    $.each(myTea, function (index, value) {
+      $(".test").append("<p>" + index + ": " + value + '<br>' + "</p>");
+    });
+  });
+});
 
