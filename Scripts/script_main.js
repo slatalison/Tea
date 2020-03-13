@@ -156,3 +156,35 @@ $(document).ready(function () {
   });
 });
 
+//按下空格键开始倒计时，同时移动吸管
+$(function () {
+  $("#straw").draggable();
+});
+
+$(function () {
+  $("#straw").draggable("disable");
+});
+
+let straw = $("#straw");
+$(document).keydown(checkKeyPressed = (e) => {
+  if (e.keyCode === 32) {
+    straw.css("background-color", "blue");
+    //drag reference start
+    $(function () {
+      $("#straw").draggable('enable');
+    });
+    //drag reference end
+  }
+});
+
+$(document).keyup(checkKeyReleased = (e) => {
+  if (e.keyCode === 32) {
+    straw.css("background-color", "darkseagreen");
+    $(function () {
+      $("#straw").draggable("disable");
+    });
+  }
+});
+
+
+//吸管的动效

@@ -127,10 +127,29 @@ h1 {
 
 .movingIg {
   z-index: 10;
-  max-width:20%;
-  max-height:20%;
+  max-width: 20%;
+  max-height: 20%;
   position: absolute;
-  top:0;
-  
+  top: 0;
 }
 
+.cup_container {
+  position: relative;
+  float: right;
+  width: 28%;
+  height: 600px;
+}
+
+.breath_countdown {
+  position: absolute;
+  top:20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgoldenrod;
+}
+
+#straw{
+  width:45px;
+  height:360px;
+  background-color: darkseagreen;
+}
